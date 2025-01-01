@@ -12,14 +12,25 @@ function Sections(props) {
             <div className='relative flex flex-col gap-6'>
                 <div className='flex flex-col gap-6'>
                     <div>
-                        <Boxs img={leaf} color={props.col} w='w-12' h='h-12' pw='w-5' shadow={props.cswaol} />
+                        <Boxs img={leaf} color={props.col} w='w-12' h='h-12' pw='w-5' shadow={props.cswaol} ro="rounded-xl" />
                         <div className=' relative left-14 text-sm font-semibold'>{props.h}</div>
                         <div className='relative left-14 text-sm text-gray-500'>{props.D}</div>
                     </div>
                     <div className='flex justify-start gap-4'>
-                        <Button text="Figma" bg="bg-gray-300" textC="text-white" w="w-16" h="h-7" r="rounded-md"/>
+                           {/* <Button text="Figma" bg="bg-gray-300" textC="text-white" w="w-16" h="h-7" r="rounded-md" />
                         <Button text="Branding" bg="bg-gray-300" textC="text-white" w="w-16" h="h-7" r="rounded-md" />
-                        <Button text="Adobe Phoptoshop" bg="bg-gray-300" textC="text-white" w="w-fit" h="h-7" r="rounded-md" />
+                        <Button text="Adobe Phoptoshop" bg="bg-gray-300" textC="text-white" w="w-fit" h="h-7" r="rounded-md" /> */}
+                        {(() => {
+                            const buttonData = [
+                                { text: "Figma", width: "w-16" },
+                                { text: "Branding", width: "w-16" },
+                                { text: "Adobe Photoshop", width: "w-fit" }
+                            ];
+                            
+                            return buttonData.map((item, index) => 
+                                <Button  key={index} text={item.text} bg="bg-gray-300" textC="text-white" w={item.width} h="h-7" r="rounded-md" />
+                            );
+                        })()}
                     </div>
                     <div className='flex justify-between'>
                         <div className='flex gap-2'>
@@ -27,11 +38,13 @@ function Sections(props) {
                             <div className='text-sm text-gray-500'>Payment Verified</div>
                         </div>
                         <div className='flex gap-1'>
-                            <img src={star} alt="noimg" className='w-4 h-4' />
-                            <img src={star} alt="noimg" className='w-4 h-4' />
-                            <img src={star} alt="noimg" className='w-4 h-4' />
-                            <img src={star} alt="noimg" className='w-4 h-4' />
-                            <img src={star} alt="noimg" className='w-4 h-4' />
+                            {
+                                [...Array(5)].map((_, index) => {
+                                    return (
+                                        <img src={star} alt="noimg" className='w-4 h-4' />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <hr />

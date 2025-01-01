@@ -14,22 +14,22 @@ function Pages1() {
                     </div>
                     <div>Fireart Studio</div>
                 </div>
-                <Boxs img={leaf} color='bg-blue-500' w='w-16' h='h-16' pw='w-8' shadow="shadow-blue-500" />
+                <Boxs img={leaf} color='bg-blue-500' w='w-16' h='h-16' pw='w-8' shadow="shadow-blue-500" ro="rounded-xl" />
                 <div className='absolute'>
                     <Borders w="w-28" h="h-28" opaicity="opacity-50" />
                 </div>
                 <div className='absolute'>
                     <Borders w="w-44" h="h-44" opaicity="opacity-50" />
-                    <Boxs img={leaf} color='bg-purple-800' w='w-12' h='h-12' pw='w-5' shadow="shadow-purple-500" bo="-bottom-0" ri=" right-0" />
+                    <Boxs img={leaf} color='bg-purple-800' w='w-12' h='h-12' pw='w-5' shadow="shadow-purple-500" bo="-bottom-0" ri=" right-0" ro="rounded-xl" />
                 </div>
                 <div className='absolute'>
                     <Borders w="w-60" h="h-60" opaicity="opacity-30" />
-                    <Boxs img={leaf} color='bg-blue-400' w='w-12' h='h-12' pw='w-5' shadow="shadow-blue-400" bo="bottom-8" />
+                    <Boxs img={leaf} color='bg-blue-400' w='w-12' h='h-12' pw='w-5' shadow="shadow-blue-400" bo="bottom-8" ri=" right-0" ro="rounded-xl" />
                 </div>
                 <div className='absolute'>
                     <Borders w="w-[300px]" h="h-[300px]" opaicity="opacity-10" />
-                    <Boxs img={leaf} color='bg-orange-500' w='w-12' h='h-12' pw='w-5' shadow="shadow-orange-500" bo="bottom-56" ri=" right-44" />
-                    <Boxs img={leaf} color='bg-green-500' w='w-12' h='h-12' pw='w-5' shadow="shadow-green-500" bo="bottom-48" ri=" right-5" />
+                    <Boxs img={leaf} color='bg-orange-500' w='w-12' h='h-12' pw='w-5' shadow="shadow-orange-500" bo="bottom-56" ri=" right-44" ro="rounded-xl" />
+                    <Boxs img={leaf} color='bg-green-500' w='w-12' h='h-12' pw='w-5' shadow="shadow-green-500" bo="bottom-48" ri=" right-5" ro="rounded-xl" />
                 </div>
             </div>
             <div className='flex flex-col gap-4 justify-center items-center text-center absolute bottom-20'>
